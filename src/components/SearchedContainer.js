@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { getSearchedReultsUrl } from '../utils/constant';
+import { SESSION_STORAGE_KEY, getSearchedReultsUrl } from '../utils/constant';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import ResultsCard from './ResultsCard';
 import { useDispatch } from 'react-redux';
@@ -33,7 +33,7 @@ const SearchedContainer = () => {
            <h1 className='font-bold line-clamp-2 text-sm'>{searchedResult?.snippet?.title}</h1>
            <h1 className='text-xs text-gray-500'>{searchedResult?.snippet?.channelTitle}</h1>
        </div>
-       </div>: <NavLink to={'/watch?v=' + searchedResult?.id?.videoId}>
+       </div>: <NavLink to={'/watch?v=' + searchedResult?.id?.videoId} onClick={() => sessionStorage.setItem(SESSION_STORAGE_KEY.VIDEO_DESCRIPTION, JSON.stringify(searchedResult))}>
             <ResultsCard key={searchedResult.etag} info={searchedResult}/>
         </NavLink>
     })}

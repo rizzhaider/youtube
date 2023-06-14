@@ -2,7 +2,7 @@ import React from 'react'
 import { timeAgo } from '../utils/constant';
 
 const ResultsCard = ({ info }) => {
-    const { snippet } = info;
+    const { snippet, statistics } = info;
     const { thumbnails } = snippet;
     return (
         <div className='flex mb-5'>
@@ -10,7 +10,7 @@ const ResultsCard = ({ info }) => {
             <div>
                 <h1 className='font-bold line-clamp-2 text-sm'>{snippet?.title}</h1>
                 <h1 className='text-xs text-gray-500'>{snippet?.channelTitle}</h1>
-                {/* <span className='text-xs text-gray-500'> {statistics?.viewCount} views ·  </span> */}
+                {statistics?.viewCount && <span className='text-xs text-gray-500'> {statistics?.viewCount} views ·  </span>}
                 <span className='text-xs text-gray-500'>{timeAgo(snippet?.publishedAt)}</span>
             </div>
         </div>

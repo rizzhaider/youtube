@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom';
-import { YOUTUBE_VIDE_API } from '../utils/constant'
+import { NavLink, json } from 'react-router-dom';
+import { SESSION_STORAGE_KEY, YOUTUBE_VIDE_API } from '../utils/constant'
 import VideoCard from './VideoCard';
 import Shimmer from './Shimmer';
 
@@ -32,7 +32,9 @@ function VideoContainer() {
            
            {
                videos.map(video => {
-                   return <NavLink key={video.id}  to={"/watch?v=" + video.id}>
+                   return <NavLink key={video.id}  to={"/watch?v=" + video.id} onClick={() => sessionStorage.setItem(
+                    SESSION_STORAGE_KEY.VIDEO_DESCRIPTION, JSON.stringify(video)
+                   )}>
                    <VideoCard info={video} />
                    </NavLink>
                })

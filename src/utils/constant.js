@@ -3,6 +3,10 @@ export const smMedia = "(min-width:641px) and (max-width:767px)";
 export const mdMedia = "(min-width:768px) and (max-width:1279px)";
 export const xlMedia = "(min-width:1280px) and (max-width:1535px)";
 
+export const SESSION_STORAGE_KEY = {
+    "VIDEO_DESCRIPTION":"VIDEO_DESCRIPTION"
+}
+
 var nameList = [
   'Time','Past','Future','Dev',
   'Fly','Flying','Soar','Soaring','Power','Falling',
