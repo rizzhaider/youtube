@@ -16,7 +16,7 @@ function SideMenu() {
             <div className='flex p-4 m-2 border-b-[1px]'>
                 <img className='h-8 cursor-pointer' alt="menu" src="https://icons-for-free.com/iconfiles/png/512/hamburger-1324760528048814325.png"
                     onClick={() => menuToogleHandler()} />
-                <NavLink to="/">
+                <NavLink to="/youtube">
                     <img className='h-8' alt="logo" src="https://freepngimg.com/thumb/youtube/77791-logo-computer-youtube-icons-download-free-image.png" />
                 </NavLink>
             </div>

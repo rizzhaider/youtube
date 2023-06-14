@@ -13,11 +13,11 @@ import SearchedContainer from './components/SearchedContainer';
 
 const appRouter = createBrowserRouter([
   {
-    path:'/',
+    path:'/youtube',
     element:<Body />,
     children:[
       {
-        path:"/",
+        path:"/youtube",
         element:<MainContainer />
       },
       {

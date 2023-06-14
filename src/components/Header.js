@@ -102,7 +102,7 @@ function Header() {
                         <div className='grid-cols-1 flex p-4'>
                             <img className='h-8 cursor-pointer' alt="menu" src="https://icons-for-free.com/iconfiles/png/512/hamburger-1324760528048814325.png"
                                 onClick={() => menuToogleHandler()} />
-                            <NavLink to="/">
+                            <NavLink to="/youtube">
                             <img className='h-8' alt="logo" src="https://freepngimg.com/thumb/youtube/77791-logo-computer-youtube-icons-download-free-image.png" />
                             </NavLink>
                         </div>
