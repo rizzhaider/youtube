@@ -26,6 +26,7 @@ const findPrime = num => {
 }
 
 const Demo = () => {
+    console.log(process.env.REACT_APP_YOUTUB_API_KEY)
     const [text, setText] = useState(0);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const primeNumber = useMemo(() => findPrime(text), [text]);
@@ -33,6 +34,7 @@ const Demo = () => {
         
     },[]) // refrencial equality
     return (
+        
         <>
             <div className={`p-2 m-2 border border-gray-400 w-1/2 ${isDarkMode && "bg-black"}`}>
               <button className='border p-1 bg-green-300' onClick={() => setIsDarkMode(!isDarkMode)}>Toggle</button>

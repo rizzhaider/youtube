@@ -1,8 +1,7 @@
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Body from './components/Body';
-import Header from './components/Header';
 import MainContainer from './components/MainContainer';
 import Watch from './components/Watch';
 import store from './utils/store';
@@ -11,13 +10,13 @@ import Demo2 from './components/Demo2';
 import SearchedContainer from './components/SearchedContainer';
 
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
-    path:'/youtube',
+    path:'/',
     element:<Body />,
     children:[
       {
-        path:"/youtube",
+        path:"/",
         element:<MainContainer />
       },
       {
