@@ -5,7 +5,7 @@ const ResultsCard = ({ info }) => {
     const { snippet, statistics } = info;
     const { thumbnails } = snippet;
     return (
-        <div className='flex mb-5'>
+        <div className='flex mb-5 max-sm:justify-center max-sm:flex-col'>
             <img className="rounded-lg mr-2" alt="thumbnail" src={thumbnails?.medium?.url} />
             <div>
                 <h1 className='font-bold line-clamp-2 text-sm'>{snippet?.title}</h1>

@@ -9,6 +9,7 @@ function Body() {
   const dispatch = useDispatch();
   const isMenuOpen = useSelector(store => store.app.isMenuOpen);
   const menuToogleHandler = () => {
+    console.log("sddsdsa");
     dispatch(menuToogle());
 }
   return (
