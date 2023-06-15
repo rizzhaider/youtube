@@ -2,7 +2,6 @@ import {memo} from 'react'
 import Comment from './Comment'
 
 const CommentLists = ({comments}) => {
-    console.log("comment lists render")
     return <div>
     {
         comments.map((comment, i) => {

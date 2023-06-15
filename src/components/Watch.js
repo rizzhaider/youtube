@@ -10,7 +10,6 @@ import VideoSuggestionCard from './VideoSuggestionCard';
 
 function Watch() {
     const { snippet, statistics } = JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEY.VIDEO_DESCRIPTION));
-    const { thumbnails } = snippet;
     const [searchParams] = useSearchParams()
     const xs = useMedia(xsMedia);
     const sm = useMedia(smMedia);
@@ -34,8 +33,7 @@ function Watch() {
         getVideoList();
     }, [])
     return (
-        <div className='h-[88vh] overflow-y-auto'>
-
+        <div id="watchContainer" className='h-[88vh] overflow-y-auto'>
             <div className={`container mx-auto p-4`}>
                 <div className='grid grid-cols-12 gap-1 h-[89vh] pb-5'>
                     <div className='col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8 2xl:col-span-9'>
@@ -69,8 +67,9 @@ function Watch() {
                             {videos.length !== 0 &&
                                 videos.map(video => {
                                     return <NavLink key={video.id} to={"/watch?v=" + video.id} onClick={() => {
+                                        document.getElementById("watchContainer").scrollTo(0,0)
                                         sessionStorage.setItem(SESSION_STORAGE_KEY.VIDEO_DESCRIPTION, JSON.stringify(video))
-                                        window.scrollY(0)
+                                        
                                     }}>
                                         <VideoSuggestionCard info={video} />
                                     </NavLink>

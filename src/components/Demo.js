@@ -26,7 +26,6 @@ const findPrime = num => {
 }
 
 const Demo = () => {
-    console.log(process.env.REACT_APP_YOUTUB_API_KEY)
     const [text, setText] = useState(0);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const primeNumber = useMemo(() => findPrime(text), [text]);
