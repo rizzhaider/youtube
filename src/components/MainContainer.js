@@ -12,7 +12,7 @@ function MainContainer() {
     }, [])
     return (
       <div>
-        <div className={`overflow-x-auto`}>
+        <div className={`overflow-x-auto scrollbar-hide`}>
         <ButtonList />
         </div>
         <div className='h-[85vh] overflow-y-auto'>

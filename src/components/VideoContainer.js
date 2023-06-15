@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink, json } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { SESSION_STORAGE_KEY, YOUTUBE_VIDE_API } from '../utils/constant'
 import VideoCard from './VideoCard';
 import Shimmer from './Shimmer';
@@ -15,7 +15,6 @@ function VideoContainer() {
         console.log(error)
        }
     }
-
     useEffect(() => {
         getVideoList();
 

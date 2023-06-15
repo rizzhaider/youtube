@@ -23,12 +23,17 @@ function Header() {
     }
 
     const getSuggestionSearch = async () => {
-        const data = await fetch(YOUTUBE_SEARCH_API + searchedQuery);
-        const json = await data.json();
-        setSuggestionResults(json[1]);
-        dispatch(addSearchCashe({
-            [searchedQuery]: json[1]
-        }))
+        try{
+            const data = await fetch(YOUTUBE_SEARCH_API + searchedQuery);
+            const json = await data.json();
+            setSuggestionResults(json[1]);
+            dispatch(addSearchCashe({
+                [searchedQuery]: json[1]
+            }))
+        }catch(error){
+            console.log(error)
+        }
+        
     }
 
     useEffect(() => {

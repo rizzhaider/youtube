@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}

@@ -18,6 +18,7 @@ function Watch() {
 
     const [videos, setVideos] = useState([]);
     const getVideoList = async () => {
+        console.log("sdadasdd");
         try {
             const data = await fetch(YOUTUBE_VIDE_API);
             const json = await data.json();
