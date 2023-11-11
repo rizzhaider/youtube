@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import {  useState } from 'react'
 
-const useScrollTo = (x, y) => {
-  useEffect(() => {
-    window.scrollTo(x,y);
-  })
+const useScrollTo = () => {
+  const [infoData, setInfoData] = useState(null);
+   const setInfoDataFn = (inputData) => {
+    setInfoData(inputData);
+   }
+  return [infoData, setInfoDataFn];
 }
 
-export default useScrollTo
+
+export default useScrollTo;

@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Provider } from 'react-redux';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
@@ -9,6 +10,9 @@ import Demo from './components/Demo';
 import Demo2 from './components/Demo2';
 import SearchedContainer from './components/SearchedContainer';
 
+
+
+//const Watch = lazy(() => import('./components/Watch'))
 
 const appRouter = createHashRouter([
   {
